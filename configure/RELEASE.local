@@ -18,7 +18,10 @@
 TEMPLATE_TOP = $(EPICS_BASE)/templates/makeBaseApp/top
 
 # ASYN is needed for base classes
-ASYN = $(SUPPORT)/asyn/4-33
+ASYN = $(SUPPORT)/asyn/4-34
 
 # ADCORE is needed for areaDetector base classes
-ADCORE = /scratch/ADCore
+#ADCORE = /scratch/ADCore
+
+BENSUPPORT = /home/cvl62853/Development/local/support
+ADCORE = $(BENSUPPORT)/ADCore
