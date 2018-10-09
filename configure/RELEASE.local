@@ -23,5 +23,4 @@ ASYN = $(SUPPORT)/asyn/4-34
 # ADCORE is needed for areaDetector base classes
 #ADCORE = /scratch/ADCore
 
-BENSUPPORT = /home/cvl62853/Development/local/support
-ADCORE = $(BENSUPPORT)/ADCore
+ADCORE = $(WORK)/ADCore
