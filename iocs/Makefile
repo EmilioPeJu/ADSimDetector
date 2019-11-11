@@ -9,6 +9,9 @@ ifneq ($(EPICS_LIBCOM_ONLY),YES)
   DIRS += simDetectorIOC
 endif
 
+DIRS := $(DIRS) $(filter-out $(DIRS), simDetector)
+DIRS := $(DIRS) $(filter-out $(DIRS), winSimDetector)
+
 include $(TOP)/configure/RULES_TOP
 
 uninstallTargets = $(foreach dir, $(DIRS), $(dir)$(DIVIDER)uninstall)
