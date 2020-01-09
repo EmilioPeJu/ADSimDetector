@@ -1,8 +1,7 @@
 TOP = ..
 include $(TOP)/configure/CONFIG
 
-DIRS := $(DIRS) $(filter-out $(DIRS), simDetector)
-DIRS := $(DIRS) $(filter-out $(DIRS), winSimDetector)
+DIRS := $(wildcard simDetector, winSimDetector)
 
 include $(TOP)/configure/RULES_TOP
 
