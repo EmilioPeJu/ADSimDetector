@@ -4,7 +4,11 @@ include $(TOP)/configure/CONFIG
 DIRS := $(DIRS) $(filter-out $(DIRS), configure)
 DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard *App))
 DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard *app))
-DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard etc))
+
+ifeq (YES, $(BUILDIOCS))
+	DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard etc))
+endif
+
 DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard iocs))
 iocs_DEPEND_DIRS += simDetectorApp
 include $(TOP)/configure/RULES_TOP
