@@ -1,6 +1,9 @@
+from __future__ import print_function
+
 import xml.dom.minidom
 import os
 import iocbuilder
+
 from iocbuilder import Substitution, AutoSubstitution, SetSimulation, Device, records, Architecture, IocDataStream
 from iocbuilder.arginfo import *
 from iocbuilder.modules.asyn import Asyn, AsynPort, AsynIP
@@ -41,7 +44,7 @@ class simDetector(AsynPort):
     DbdFileList = ['simDetectorSupport']
 
     def Initialise(self):
-        print '# simDetectorConfig(portName, maxSizeX, maxSizeY, dataType, maxBuffers, maxMemory)'
-        print 'simDetectorConfig("%(PORT)s", %(WIDTH)s, %(HEIGHT)s, %(DATATYPE)d, %(BUFFERS)d, %(MEMORY)d)' % self.__dict__
+        print('# simDetectorConfig(portName, maxSizeX, maxSizeY, dataType, maxBuffers, maxMemory)')
+        print('simDetectorConfig("%(PORT)s", %(WIDTH)s, %(HEIGHT)s, %(DATATYPE)d, %(BUFFERS)d, %(MEMORY)d)' % self.__dict__)
 
 
